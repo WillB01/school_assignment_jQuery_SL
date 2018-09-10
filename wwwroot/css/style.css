@@ -1,0 +1,620 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+a {
+    color: #34495e;
+    
+}
+
+h3 {
+    color: white;
+}
+
+h1 {
+    width: 100%;
+    margin-bottom: 1em;
+    color: #3498db;
+    color: #111;
+    font-family: 'Helvetica Neue',
+        sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.hr-one {
+    border-top: 5px double #8c8b8b;
+}
+
+a:hover {
+    text-decoration: none;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    display: block;
+    /* margin: 20px auto; */
+    max-width: 180px;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    background: white;
+    cursor: pointer;
+    border: 0.3em solid #34495e;
+    outline: none;
+    margin-bottom: 1em;
+}
+
+button {}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    color: rgba(255, 255, 255, 0.85);
+    background: #5CA375;
+    animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+
+.site {
+    /* max-width: 5em; */
+    margin: 0 auto;
+    font-family: 'Archivo', sans-serif;
+   
+}
+
+.my-checkbox input {
+    background: none;
+    background: red;
+}
+#flex-container {
+    display: flex;
+    Height: 100vh;
+    width: 100%;
+    border: solid 0.5em rgb(246, 246, 246);
+}
+
+/* checkbox style content ----------------------------------- */
+#fieldset {
+    background: #34495e;
+    height: 250px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "heading checkbox";
+ 
+    
+    
+}
+
+
+#checkbox-container {
+   
+    
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "tbana bus pendel";
+    grid-gap: 1em;
+    grid-area: checkbox;
+    
+
+
+    
+
+    
+    /* width: 100%;
+    margin: 0 auto; */
+    
+   
+}
+
+.checkbox-tbanna-class{
+    grid-area: tbana;
+    
+
+}
+.checkbox-buss-class{
+    grid-area: bus;
+}
+.checkbox-pendel-class{
+    grid-area: pendel;
+}
+.checkbox-all{
+    justify-self: center;
+    width: 100%;
+    background: rgb(255, 255, 255);
+   
+    -moz-border-radius: 70px;
+    -webkit-border-radius: 70px;
+    border-radius: 70px;
+    color: #34495e;
+   
+}
+.checkboxtext {
+    color: #34495e;
+    font-size: 0.6em;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label {
+    /* defines the size of the check box */
+    cursor: pointer;
+    font-size: 1.3em;
+    border-radius: 4px;
+    transition: ease-in-out 20ms;
+ 
+}
+
+input[type="checkbox"]+label i {
+    /* border:  1em solid #E3E7F2; */
+    padding: 10px 10px 10px 10px;
+}
+
+input[type="checkbox"]:checked+label i {
+    color: #5CA375;
+    transition: color 250ms cubic-bezier(.4, .0, .23, 1);
+    animation: bigger 200ms cubic-bezier(.4, .0, .23, 1);
+}
+
+input[type="checkbox"]:not(:checked)+label i {
+    animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+}
+
+input[type="checkbox"]:checked+label .checkboxtext {
+    color: #5CA375;
+    animation: bigger 200ms cubic-bezier(.4, .0, .23, 1);
+}
+
+
+
+/* checkbox style content over ----------------------------------- */
+/* search content ----------------------------------- */
+#clear-all {
+    background-color: rgb(216, 124, 124);
+
+    margin: 1em auto;
+    max-width: 100px;
+   
+    
+    color: #fff;
+    
+    cursor: pointer;
+    overflow: hidden;
+   
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    /* animation: slideRemoveNoHover 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4) forwards; */
+    
+}
+
+#clear-all-text:hover{
+    /* animation: slideBGC 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4) forwards; */
+    background: #c0392b;
+    
+}
+
+#clear-all-text{
+    padding: 0.5em 0;
+    margin: 0 auto;
+    animation: slideRemoveNoHover 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4) forwards;
+  
+    
+   
+}
+
+
+#clear-all i{
+    color: #fff;
+    animation: slideRemoveNoHover 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4) forwards;
+    
+  }
+  #clear-all a{
+    color: #fff;
+    margin: 0 auto;
+    padding: 1em;
+   
+    
+  }
+
+#clear-all:hover i{
+    animation: slideRemove 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4) forwards;
+    
+  }
+
+#search-container {
+    width: 30%;
+    box-sizing: border-box;
+    animation: out 20s cubic-bezier(0, 1.92, .23, .44) forwards;
+    flex-shrink: inherit;
+}
+
+#search-container:hover {
+    animation: sideShadow 20s cubic-bezier(0, 1.92, .23, .44) forwards;
+    z-index: 1;
+}
+
+#form-stop {
+    margin: 1em auto;
+    height: 200px;
+    border-radius: 0 0 5px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#search-input {
+    border: 0.3em solid #34495e;
+    padding: 10px 15px;
+    font: small-caption;
+    font-size: 12px;
+    font-size: 0.8rem;
+    width: calc(100% - 50px);
+    color: #34495e;
+    outline: none;
+    line-height: 1.5;
+}
+
+.input-wrapper {
+    width: 90%;
+    max-width: 320px;
+    border-radius: 5px;
+    background-color: #34495e;
+    overflow: hidden;
+    
+    margin: 1em;
+}
+
+#search-btn {
+    cursor: pointer;
+}
+
+.input-wrapper {
+    margin: 0 auto;
+}
+
+.input-wrapper:hover {
+    cursor: pointer;
+}
+
+.fa-search {
+    color: white;
+    margin-left: 0.5em;
+}
+
+/* search content over ----------------------------------- */
+/* main content ----------------------------------- */
+#main-content {
+    overflow: scroll;
+    width: 70%;
+    background: #4799B7;
+    border-radius: 0 20px 0 0;
+    box-shadow: 0px 0 0px 0 #555;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 10ms;
+}
+
+#main-content:hover {
+    animation: mainShadow 2s forwards;
+}
+/* main content over ----------------------------------- */
+
+
+
+#show-data {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stop-container {
+    padding: 1em;
+    background: white;
+    width: 100%;
+    height: auto;
+    color: #34495e;
+    margin: 1em auto;
+    border-radius: 0.5em;
+    font-size: 1em;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    
+    transition: ease-in-out;
+
+}
+
+.stop-container div{
+    padding: 1em;
+    border-radius: 4px; 
+}
+
+
+.stop-container:hover{
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+   
+    
+    
+}
+
+.specific-station-effect {
+    overflow-y: hidden;
+    max-height: 500px;
+    /* approximate max height */
+    transition-property: all;
+    transition-duration: .10s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.specific-station.loaded {
+    background: #FF5D4E;
+    padding: 1em 1em 1em 1em;
+    margin: 1em auto;
+ 
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.heading{
+    background: #FF5D4E;
+    color:white;
+    padding: 0.5em 1em;
+    /* font-size:  2em; */
+    font-size: 100%;
+    text-align: center; 
+    border-radius: 10px ;
+    
+    max-width: 200px;
+    height: 100px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    grid-area: heading;
+    justify-self: left;
+
+}
+
+
+/* border-right: 0.5em solid rgb(255, 209, 124); */
+.dim {
+    cursor: pointer;
+}
+
+.dim .hidden {
+    display: none;
+}
+
+/*LOOOOADDDDER*/
+.start {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+    margin: 10% auto;
+}
+
+.end {
+    display: none;
+}
+
+.stops-on-route-style{
+    padding: 0.5em 0.5em 0.5em 2em;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    max-height: 400px;
+    overflow:scroll; */
+    
+}
+
+.stop-container div{
+   margin-top: 1em;
+   /* margin-left: 15px; */
+}
+
+
+.stop-container div:nth-child(even){
+    background: #ededed;
+   
+}
+/* .stop-container:nth-child(1){
+    background: red;
+} */
+
+/* .depature:first-child{
+    background: red;
+} */
+
+/* Safari */
+
+/*/////////////////////*/
+/* .dim .hidden:first-child {
+
+} */
+/* @supports (grid-area: auto){
+
+}; */
+
+#fig-caption-sl {
+    width: 100%;
+    margin: 1em 0 2em 0;
+}
+
+#fig-caption-sl>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+.active{color:green}
+.inactive{color:red}
+
+/* @keyframes slideBGC{
+    0%{ 
+        background-color: #c0392b;
+        
+  }
+    100%{ background-color: #c0392b;}
+}
+
+@keyframes slideRemove{
+    0%{}
+    100%{ 
+        
+       
+      }
+}
+
+@keyframes slideRemoveNoHover{
+  0%{}
+  100%{ 
+      margin-left: 8px;
+  }
+}
+ */
+
+@keyframes bigger {
+    0% {
+        transform: scale(0);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes smaller {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes checkbox-check {
+    0% {
+        width: 0;
+        height: 0;
+        border-color: #212121;
+    }
+
+    33% {
+        width: .2em;
+        height: 0;
+    }
+
+    100% {
+        width: .2em;
+        height: .5em;
+        border-color: #212121;
+    }
+}
+
+@keyframes shrink-bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    33% {
+        transform: scale(.85);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes mainShadow {
+    0% {}
+
+    100% {
+        box-shadow: -4px 0 5px 0 #555;
+    }
+}
+
+@keyframes sideShadow {
+    0% {}
+
+    100% {
+        box-shadow: 10px 10px 73px -24px rgba(0, 0, 0, 1);
+    }
+}
+
+@keyframes out {
+    from {
+        box-shadow: 10px 10px 73px -24px rgba(0, 0, 0, 1);
+    }
+
+    ;
+
+    to {
+        box-shadow: 10px 0px 0px 0px rgba(0, 0, 0, 1);
+    }
+
+    ;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
