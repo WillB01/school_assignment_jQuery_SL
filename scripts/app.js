@@ -99,9 +99,11 @@ $(function () {
 
     });
     $("#search-input").keyup(function (e) { //Get value from input and send with key ENTER
+       
         resetShowData();
         isCheckbox = false;
         userSearchInput = e.target.value;
+        
         searchWithEnterKey(getStopLocation, e);
         loader();
 
@@ -116,14 +118,18 @@ $(function () {
     });
 
     $("#search-btn").on("click", function () { //Get Stops
-        
-       
-        $(this).removeClass('inactive').addClass('active');
+        if(userSearchInput === ""){
+            $(this).removeClass('active');
+        }else{
+            $(this).removeClass('inactive').addClass('active');
       
-           resetShowData();
-           getStopLocation();
-           loader();
-           isCheckbox = false;
+            resetShowData();
+            getStopLocation();
+            loader();
+            isCheckbox = false;
+        }
+       
+     
        
 
     });
@@ -134,7 +140,12 @@ $(function () {
 
         if (key == 13) // the enter key code
         {
-            search();
+            if(userSearchInput === ""){
+                $("#search-btn").removeClass('active');
+            }else{
+                $("#search-btn").removeClass('inactive').addClass('active');
+                search();
+            }
 
 
         };
